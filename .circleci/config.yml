@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  build:
+    docker:
+      image: circleci/python:3.8
+
+    working_directory: ~/FlaskCI
+
+    steps:
+      - checkout
+      - run: 
+        name: Création d'environnement de travail
+          command: python3 -m venv venv
+      - run:
+          name: Activate de l'environnement
+          command: source venv/bin/activate
+      - run:
+          name: Mise à jour de la commande PIP
+          command: pip install --upgrade pip
+      - run:
+          name: Installation de dépendences
+          command: pip install -r requirements.txt
+      - run:
+          name: Commande de teste
+          command: pytest
+
