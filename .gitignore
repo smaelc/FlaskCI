@@ -1,0 +1,6 @@
+venv
+**.swp
+.DS_Store
+__pycache__
+__py**
+
