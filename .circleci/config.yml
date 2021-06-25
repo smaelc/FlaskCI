@@ -15,6 +15,6 @@ jobs:
       - run: 
           name: Lancement de l'application
           command: export FLASK_APP=app.py
-          command: export FLASK_ENV=development
-          command: flask run
+      - run: export FLASK_ENV=development
+      - run: flask run
 
