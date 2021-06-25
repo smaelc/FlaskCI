@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run: 
         name: Création d'environnement de travail
-          command: python3 -m venv venv
+          command: python -m venv venv
       - run:
           name: Activate de l'environnement
           command: source venv/bin/activate
