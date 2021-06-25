@@ -12,5 +12,9 @@ jobs:
       - run: source venv/bin/activate
       - run: pip install --upgrade pip
       - run: pip install -r requirements.txt
-      - run: pytest
+      - run: 
+          name: Lancement de l'application
+          command: export FLASK_APP=app.py
+          command: export FLASK_ENV=development
+          command: flask run
 
