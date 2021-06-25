@@ -8,19 +8,9 @@ jobs:
 
     steps:
       - checkout
-      - run: 
-        name: Création d'environnement de travail
-          command: python -m venv venv
-      - run:
-          name: Activate de l'environnement
-          command: source venv/bin/activate
-      - run:
-          name: Mise à jour de la commande PIP
-          command: pip install --upgrade pip
-      - run:
-          name: Installation de dépendences
-          command: pip install -r requirements.txt
-      - run:
-          name: Commande de teste
-          command: pytest
+      - run: python -m venv venv
+      - run: source venv/bin/activate
+      - run: pip install --upgrade pip
+      - run: pip install -r requirements.txt
+      - run: pytest
 
