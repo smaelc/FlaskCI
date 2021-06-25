@@ -8,3 +8,6 @@ def index():
     name = 'Smael'
     return render_template('book/index.html', name=name)
 
+
+if __name__ == '__main__':
+    app.run(debug=True)
